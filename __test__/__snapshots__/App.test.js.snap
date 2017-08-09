@@ -6,11 +6,16 @@ exports[`<App/> - Main Container of Application Initial State of App renders <Ap
     Wages
   </h1>
   <label
-    for="number-input"
+    htmlFor="number-input"
   >
     <input
       id="number-input"
     />
   </label>
+  <div>
+    <h2>
+      Wages Component
+    </h2>
+  </div>
 </div>
 `;

@@ -8,7 +8,7 @@
     "test:watch": "jest --watchAll",
     "prebuild": "rimraf dist",
     "build": "webpack",
-    "dev": "webpack-dev-server --inline --hot"
+    "dev": "webpack-dev-server --inline --hot --open"
   },
   "author": "Michael Habib",
   "license": "ISC",

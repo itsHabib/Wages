@@ -1,8 +1,10 @@
 import React from 'react'
-import App from '../src/App'
-import TextBox from '../src/TextBox'
 import { shallow } from 'enzyme'
 import renderer from 'react-test-renderer'
+
+import App from '../src/App'
+import TextBox from '../src/TextBox'
+import Wages from '../src/Wages'
 
 describe('<App/> - Main Container of Application', () => {
 
@@ -16,11 +18,21 @@ describe('<App/> - Main Container of Application', () => {
             expect(tree).toMatchSnapshot()
         })
 
+
+
         // App is in charge of rendering the TextBox component
         it('it should render a TextBox component', () => {
             const wrapper = shallow(<App/>)
             expect(wrapper.find(TextBox)).toHaveLength(1)
         })
+
+        // App is in charge of rendering the Wages component
+        it('it should render a Wages component', () => {
+            const wrapper = shallow(<App/>)
+            expect(wrapper.find(Wages)).toHaveLength(1)
+        })
+
+        
     })
 
 })
