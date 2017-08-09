@@ -1,14 +1,34 @@
 {
   "name": "wages",
   "version": "1.0.0",
-  "description": "Application that gives the gives the user a yearly wage based on an hourly input provided by the user or vice versa",
+  "description": "Application that gives the gives the user a yearly wage based on an hourly input provided or vice versa",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "rimraf dist",
+    "build": "webpack",
+    "dev": "webpack-dev-server --inline --hot"
   },
   "author": "Michael Habib",
   "license": "ISC",
   "devDependencies": {
-    "surge": "^0.19.0"
+    "babel-core": "^6.25.0",
+    "babel-jest": "^20.0.3",
+    "babel-loader": "^7.1.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^2.9.1",
+    "husky": "^0.14.3",
+    "npm-run-all": "^4.0.2",
+    "react-test-renderer": "^15.6.1",
+    "rimraf": "^2.6.1",
+    "surge": "^0.19.0",
+    "webpack": "^3.5.1",
+    "webpack-dev-server": "^2.7.1"
+  },
+  "dependencies": {
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
   }
 }
