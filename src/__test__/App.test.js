@@ -2,9 +2,9 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import renderer from 'react-test-renderer'
 
-import App from '../src/App'
-import TextBox from '../src/TextBox'
-import Wages from '../src/Wages'
+import App from '../components/App'
+import TextBox from '../components/TextBox'
+import Wages from '../components/Wages'
 
 describe('<App/> - Main Container of Application', () => {
 
@@ -17,8 +17,6 @@ describe('<App/> - Main Container of Application', () => {
             const tree = renderer.create( < App / > ).toJSON()
             expect(tree).toMatchSnapshot()
         })
-
-
 
         // App is in charge of rendering the TextBox component
         it('it should render a TextBox component', () => {
