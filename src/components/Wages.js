@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Wages = () => {
+const Wages = ({ wage }) => {
     return (
-        <div><h2>Wages Component</h2></div>
+        <div><h2>{wage}</h2></div>
     )
 }
 

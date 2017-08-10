@@ -1,11 +1,16 @@
 import React, { Component } from 'react'
 
-export default class TextBox extends Component {
-    render() {
+const TextBox = ({ onNumberInput }) => {
+
+        const getNumber = (event) => {
+            onNumberInput(event.target.value)
+        }
+
         return (
             <label htmlFor = "number-input">
-                <input id="number-input"/>
+                <input onChange={getNumber} id="number-input"/>
             </label>
         )
-    }
 }
+
+module.exports = TextBox
