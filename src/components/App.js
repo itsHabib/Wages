@@ -4,6 +4,7 @@ import wageCalc from '../wageCalc'
 
 import TextBox from './TextBox'
 import Wages from './Wages'
+import RateRadioBtn from './RateRadioBtn'
 
 export default class App extends Component { 
     constructor() {
@@ -15,6 +16,7 @@ export default class App extends Component {
         }
         
         this.onNumberInput = this.onNumberInput.bind(this)
+        this.updateRate = this.updateRate.bind(this)
     }
     // Converts number to correct wage and
     // sends to wages component
@@ -29,13 +31,31 @@ export default class App extends Component {
             wage: wage
                   
         })
+    }
+
+    // Checks to see if isAnnual state variable
+    // needs to be udpated, and updates if so
+    updateRate(rate) {
+        if (rate === 'annual' && !this.state.isAnnual) {
+            this.setState({
+                isAnnual: true
+            })
+        } else if(rate === 'hourly' && this.state.isAnnual) {
+            this.setState({
+                isAnnual: false
+            })
+        }
+        console.log(this.state.isAnnual)
+        
 
     }
+
 
     render() {
         return (
             <div>
                 <h1>Wages</h1>
+                <RateRadioBtn updateRate={this.updateRate}/>
                 <TextBox onNumberInput = {this.onNumberInput}/>
                 <Wages wage = {this.state.wage}/>
             </div>
