@@ -11,7 +11,7 @@ export default class App extends Component {
 
         this.state = {
             wage: "",
-            isAnnual: false
+            isAnnual: false,
         }
         
         this.onNumberInput = this.onNumberInput.bind(this)
@@ -19,9 +19,15 @@ export default class App extends Component {
     // Converts number to correct wage and
     // sends to wages component
     onNumberInput(number) {
-        console.log(`Change detected! ${number} entered`)
+        let wage
+        if (this.state.isAnnual)
+            wage = wageCalc.toHourly(number)
+        else
+            wage = wageCalc.toAnnual(number)
+
         this.setState({
-            wage: number
+            wage: wage
+                  
         })
 
     }

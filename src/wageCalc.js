@@ -10,7 +10,7 @@ const wageCalc = {
         return hourlyRate * HOURS_PER_WEEK * WEEKS 
     },
     toHourly(annualSalary) {
-        return annualSalary / (WEEKS * HOURS_PER_WEEK)
+        return (annualSalary / (WEEKS * HOURS_PER_WEEK)) * 1.00
     }
 }
 
