@@ -1,7 +1,7 @@
 import React from 'react'
 
 // Input field that notifies the app of numbers entered
-const TextBox = ({ onNumberInput }) => {
+const TextBox = ({ onNumberInput, switched }) => {
 
     const getNumber = (event) => {
         onNumberInput(event.target.value)

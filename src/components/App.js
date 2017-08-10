@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import propTypes from 'prop-types'
-import wageCalc from '../wageCalc'
+import wageCalc from '../util/wageCalc'
 
 import TextBox from './TextBox'
 import Wages from './Wages'
@@ -13,6 +13,7 @@ export default class App extends Component {
         this.state = {
             wage: "",
             isAnnual: false,
+            switched: false
         }
         
         this.onNumberInput = this.onNumberInput.bind(this)
@@ -38,14 +39,19 @@ export default class App extends Component {
     updateRate(rate) {
         if (rate === 'annual' && !this.state.isAnnual) {
             this.setState({
-                isAnnual: true
+                isAnnual: true,
+                wage: ""
             })
+            document.getElementById('number-input').value = ""
         } else if(rate === 'hourly' && this.state.isAnnual) {
             this.setState({
-                isAnnual: false
+                isAnnual: false,
+                wage: ""
             })
+            document.getElementById('number-input').value = ""
+
         }
-        console.log(this.state.isAnnual)
+        
         
 
     }
