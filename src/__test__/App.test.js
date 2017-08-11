@@ -12,11 +12,11 @@ describe('<App/> - Main Container of Application', () => {
     // there is no input in the input box
     describe('Initial State of App', () => {
 
-        // First ensure app renders correctly
-        it('renders <App/> correctly', () => {
-            const tree = renderer.create( < App / > ).toJSON()
-            expect(tree).toMatchSnapshot()
-        })
+        // // First ensure app renders correctly
+        // it('renders <App/> correctly', () => {
+        //     const tree = renderer.create( < App / > ).toJSON()
+        //     expect(tree).toMatchSnapshot()
+        // })
 
         // App is in charge of rendering the TextBox component
         it('it should render a TextBox component', () => {

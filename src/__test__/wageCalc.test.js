@@ -1,7 +1,7 @@
-import wageCalc from '../wageCalc'
+import wageCalc from '../util/wageCalc'
 
-var HOURLY = 25
-var ANNUAL = 52000
+var HOURLY = '25.00'
+var ANNUAL = '52000.00'
 
 describe('A wage calculator', () => {
     it('will output an annual salary based on an hourly rate', () => {

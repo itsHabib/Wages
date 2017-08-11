@@ -4,7 +4,7 @@
   "description": "Application that gives the gives the user a yearly wage based on an hourly input provided or vice versa",
   "main": "index.js",
   "scripts": {
-    "test": "jest --expand",
+    "test": "jest",
     "prebuild": "rimraf dist",
     "build": "webpack -p",
     "dev": "webpack-dev-server --inline --hot",
@@ -22,6 +22,7 @@
     "enzyme": "^2.9.1",
     "file-loader": "^0.11.2",
     "husky": "^0.14.3",
+    "jest": "^20.0.4",
     "jest-enzyme": "^3.6.1",
     "npm-run-all": "^4.0.2",
     "react-test-renderer": "^15.6.1",
