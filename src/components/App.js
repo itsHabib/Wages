@@ -41,7 +41,7 @@ export default class App extends Component {
     // sends to wages component
     onNumberInput(number) {
         // if input field is empty, clear out wages component
-        if (document.getElementById('number-input').value === '' || number === '0') {
+        if (document.getElementById('number-input').value === '') {
             this.setState({
                 wage: ""
             })
@@ -85,7 +85,7 @@ export default class App extends Component {
         return (
             <div className="container-fluid">
                 <div className="row justify-content-center">
-                    <h1 className='title m-1 p-1'>Wages</h1>
+                    <h1 className='title m-2 pr-5'>Wages</h1>
                 </div>
                 <MuiThemeProvider muiTheme={muiTheme}>
                     <div className="row justify-content-center">

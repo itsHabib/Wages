@@ -7,10 +7,10 @@ import Paper from 'material-ui/Paper'
 const TextBox = ({ onNumberInput, switched }) => {
 
     const getNumber = (event) => {
-        console.log(event.target.value)
-        if (!(event.target.value === 'undefined')){
-            onNumberInput(event.target.value)
-        }
+            let num = parseInt(event.target.value)
+            if ( num != 0)
+                onNumberInput(parseInt(num))
+        
     }
 
     return (               
