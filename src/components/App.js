@@ -53,8 +53,13 @@ export default class App extends Component {
             else
                 wage = wageCalc.toAnnual(number)
 
-            this.setState({
-                wage: '$'+commatize(wage)
+            if (this.state.isAnnual)
+                this.setState({
+                    wage: '$'+wage
+                })
+            else     
+                this.setState({
+                    wage: '$'+commatize(wage)
                   
         })
 
