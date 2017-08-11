@@ -1,34 +1,45 @@
 body {
     background-color: #EEEEEE;
 }
+
+@media(max-width: 500px) {
+    .wage {
+        color: #689F38;
+        font-family: beerFont;
+        font-size: 3.25rem;
+    }
+    .info {
+        color: #689F38;
+        font-family: beerFont;
+    }
+    .title {
+        font-family: beerFont;
+        font-size: 4.25rem;
+    }
+}
+
 .wage {
     color: #689F38;
     font-family: beerFont;
-    font-size: 4em;
+    font-size: 4.5rem;
 }
 
 input {
     font-size: 1.5em
 }
 
-
 .info {
     color: #689F38;
     font-family: beerFont;
+    font-size: 1.25rem;
 }
-
 
 .title {
     font-family: beerFont;
-    font-size: 4.3em;
+    font-size: 5.5rem;
 }
-
-
 
 @font-face {
     src: url('assets/beer-money.ttf');
     font-family: beerFont;
 }
-
-
-

@@ -89,7 +89,7 @@ export default class App extends Component {
                     <h1 className='title m-1 pr-4'>Wages</h1>
                 </div>
                 <div className="row justify-content-center">
-                    <div className="col-sm-6">
+                    <div className="col-md-6">
                         <p className="info p-1">
                             {INFO}
                         </p>

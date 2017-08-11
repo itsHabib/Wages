@@ -8,8 +8,6 @@ injectTapEventPlugin()
 
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
 import './style.css'
-
-
 render(<App/>, document.getElementById('root'))
 
 // if (module.hot) {
