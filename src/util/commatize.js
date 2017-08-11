@@ -14,9 +14,6 @@ export default function commatize(num) {
     } else {
         numOfCommas = parseInt(length / 3)
     }
-    console.log(`Number: ${num}`)
-    console.log(`Length: ${length}`)
-    console.log(`Num of Commas: ${numOfCommas}`)
     if (length >= 4) {
         let insertAt = 3
         reversedNum.splice(insertAt, 0, ",")
@@ -24,8 +21,6 @@ export default function commatize(num) {
             // insert a comma at the next digit 
             // after every thrid
             insertAt += 4
-            console.log('Index: '+ i)
-            console.log('Inserting at: '+(insertAt))
             reversedNum.splice(insertAt, 0, ",")
 
             

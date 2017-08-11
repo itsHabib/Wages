@@ -7,13 +7,17 @@ import Paper from 'material-ui/Paper'
 const TextBox = ({ onNumberInput, switched }) => {
 
     const getNumber = (event) => {
-        onNumberInput(event.target.value)
+        console.log(event.target.value)
+        if (!(event.target.value === 'undefined')){
+            onNumberInput(event.target.value)
+        }
     }
 
     return (               
             <TextField
                 hintText='Hourly or Annual Rate'
                 type='number'
+                min = '0'
                 onChange={getNumber}
                 id='number-input'
                     />

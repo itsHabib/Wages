@@ -41,11 +41,11 @@ export default class App extends Component {
     // sends to wages component
     onNumberInput(number) {
         // if input field is empty, clear out wages component
-        if (document.getElementById('number-input').value === '') {
+        if (document.getElementById('number-input').value === '' || number === '0') {
             this.setState({
                 wage: ""
             })
-        } else {
+        }  else {
             let wage
             if (this.state.isAnnual)
                 wage = wageCalc.toHourly(number)
