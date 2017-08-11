@@ -86,11 +86,11 @@ export default class App extends Component {
         return (
             <div className="container-fluid">
                 <div className="row justify-content-center">
-                    <h1 className='title m-2 pr-5'>Wages</h1>
+                    <h1 className='title m-1 pr-4'>Wages</h1>
                 </div>
                 <div className="row justify-content-center">
                     <div className="col-sm-6">
-                        <p className="info">
+                        <p className="info p-1">
                             {INFO}
                         </p>
                     </div>
