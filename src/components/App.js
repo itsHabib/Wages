@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import propTypes from 'prop-types'
 import wageCalc from '../util/wageCalc'
 import commatize from '../util/commatize'
+import { INFO } from '../constants' 
 
 import TextBox from './TextBox'
 import Wages from './Wages'
@@ -86,6 +87,13 @@ export default class App extends Component {
             <div className="container-fluid">
                 <div className="row justify-content-center">
                     <h1 className='title m-2 pr-5'>Wages</h1>
+                </div>
+                <div className="row justify-content-center">
+                    <div className="col-sm-6">
+                        <p className="info">
+                            {INFO}
+                        </p>
+                    </div>
                 </div>
                 <MuiThemeProvider muiTheme={muiTheme}>
                     <div className="row justify-content-center">
