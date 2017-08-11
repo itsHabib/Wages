@@ -1,4 +1,5 @@
 import React from 'react'
+import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton';
 
 // very simple component which just notifies the app
 // that the user wants to switch between annual salary & hourly rate
@@ -11,8 +12,25 @@ const RateRadioBtn = ({ updateRate }) => {
 
     return (
         <div>
-                <input type="radio" name="rate" value="annual" onClick=    {handleClick}/>Annual
-                <input type="radio" value="hourly" name="rate" onClick={handleClick} defaultChecked={true}/>Hourly
+            <RadioButtonGroup name="rate" 
+                              defaultSelected='hourly'
+                              className='pt-3'
+                              style={{display: 'flex', flexDirection: 'row'}}
+                              onChange={handleClick}
+            >
+                <RadioButton
+                    value='annual'
+                    label='Annual'
+                    className='m-1'
+                    style={{display: 'inline-block', width:'auto'}}
+                />
+                <RadioButton
+                    value='hourly'
+                    className='m-1'
+                    label='Hourly'
+                    style={{display: 'inline-block', width:'auto'}}
+                />
+            </RadioButtonGroup>
         </div>
     )
 }

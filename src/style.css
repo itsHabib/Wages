@@ -1,18 +1,23 @@
 body {
-    background-color: #E0E0E0;
+    background-color: #EEEEEE;
 }
 .wage {
-    color: #388E3C;
+    color: #689F38;
+    font-family:beerFont;
+    font-size: 2.75em;
 }
 
 
 
 .title {
     font-family: beerFont;
-    font-size: 4em;
+    font-size: 4.3em;
 }
+
+
 
 @font-face {
     src: url('assets/beer-money.ttf');
     font-family: beerFont;
 }
+

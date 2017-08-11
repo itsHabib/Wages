@@ -6,6 +6,20 @@ import TextBox from './TextBox'
 import Wages from './Wages'
 import RateRadioBtn from './RateRadioBtn'
 
+// needed to apply material ui elements
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import getMuiTheme from 'material-ui/styles/getMuiTheme'
+import { lightGreen700 } from 'material-ui/styles/colors'
+
+// Base Material theme for application
+const muiTheme = getMuiTheme({
+    palette : {
+        primary1Color: lightGreen700
+    }
+})
+
+
+
 export default class App extends Component { 
     constructor() {
         super()
@@ -19,6 +33,9 @@ export default class App extends Component {
         this.onNumberInput = this.onNumberInput.bind(this)
         this.updateRate = this.updateRate.bind(this)
     }
+
+    
+
     // Converts number to correct wage and
     // sends to wages component
     onNumberInput(number) {
@@ -69,10 +86,14 @@ export default class App extends Component {
                 <div className="row justify-content-center">
                     <h1 className='title m-1 p-1'>Wages</h1>
                 </div>
-                <div className="row justify-content-center">
-                    <RateRadioBtn updateRate={this.updateRate}/>
-                    <TextBox onNumberInput = {this.onNumberInput}/>
-                </div>
+                <MuiThemeProvider muiTheme={muiTheme}>
+                    <div className="row justify-content-center">
+                        <TextBox onNumberInput = {this.onNumberInput}/>
+                        <RateRadioBtn updateRate={this.updateRate}/>
+
+                    </div>
+                </MuiThemeProvider>
+
                 <div className="row justify-content-center">
                     <Wages wage = {this.state.wage}/>
                 </div>
