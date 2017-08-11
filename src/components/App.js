@@ -22,16 +22,25 @@ export default class App extends Component {
     // Converts number to correct wage and
     // sends to wages component
     onNumberInput(number) {
-        let wage
-        if (this.state.isAnnual)
-            wage = wageCalc.toHourly(number)
-        else
-            wage = wageCalc.toAnnual(number)
+        // if input field is empty, clear out wages component
+        if (document.getElementById('number-input').value === '') {
+            this.setState({
+                wage: ""
+            })
+        } else {
+            let wage
+            if (this.state.isAnnual)
+                wage = wageCalc.toHourly(number)
+            else
+                wage = wageCalc.toAnnual(number)
 
-        this.setState({
-            wage: wage
+            this.setState({
+                wage: wage
                   
         })
+
+        }
+        
     }
 
     // Checks to see if isAnnual state variable
@@ -52,10 +61,7 @@ export default class App extends Component {
 
         }
         
-        
-
     }
-
 
     render() {
         return (
