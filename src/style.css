@@ -3,9 +3,10 @@ body {
 }
 .wage {
     color: #689F38;
-    font-family:beerFont;
-    font-size: 2.75em;
+    font-family: beerFont;
+    font-size: 4em;
 }
+
 
 
 
@@ -20,4 +21,6 @@ body {
     src: url('assets/beer-money.ttf');
     font-family: beerFont;
 }
+
+
 

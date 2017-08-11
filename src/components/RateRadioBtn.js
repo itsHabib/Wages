@@ -14,7 +14,7 @@ const RateRadioBtn = ({ updateRate }) => {
         <div>
             <RadioButtonGroup name="rate" 
                               defaultSelected='hourly'
-                              className='pt-3'
+                              className='pt-2 m-1'
                               style={{display: 'flex', flexDirection: 'row'}}
                               onChange={handleClick}
             >

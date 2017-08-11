@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import propTypes from 'prop-types'
 import wageCalc from '../util/wageCalc'
+import commatize from '../util/commatize'
 
 import TextBox from './TextBox'
 import Wages from './Wages'
@@ -52,7 +53,7 @@ export default class App extends Component {
                 wage = wageCalc.toAnnual(number)
 
             this.setState({
-                wage: '$'+wage
+                wage: '$'+commatize(wage)
                   
         })
 
@@ -90,7 +91,6 @@ export default class App extends Component {
                     <div className="row justify-content-center">
                         <TextBox onNumberInput = {this.onNumberInput}/>
                         <RateRadioBtn updateRate={this.updateRate}/>
-
                     </div>
                 </MuiThemeProvider>
 
