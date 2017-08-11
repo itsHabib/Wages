@@ -35,7 +35,7 @@ export default class App extends Component {
                 wage = wageCalc.toAnnual(number)
 
             this.setState({
-                wage: wage
+                wage: '$'+wage
                   
         })
 
@@ -65,11 +65,18 @@ export default class App extends Component {
 
     render() {
         return (
-            <div>
-                <h1>Wages</h1>
-                <RateRadioBtn updateRate={this.updateRate}/>
-                <TextBox onNumberInput = {this.onNumberInput}/>
-                <Wages wage = {this.state.wage}/>
+            <div className="container-fluid">
+                <div className="row justify-content-center">
+                    <h1 className='title m-1 p-1'>Wages</h1>
+                </div>
+                <div className="row justify-content-center">
+                    <RateRadioBtn updateRate={this.updateRate}/>
+                    <TextBox onNumberInput = {this.onNumberInput}/>
+                </div>
+                <div className="row justify-content-center">
+                    <Wages wage = {this.state.wage}/>
+                </div>
+
             </div>
         )
     }

@@ -7,10 +7,10 @@ var WEEKS = 52
 var HOURS_PER_WEEK = 40
 const wageCalc = {
     toAnnual(hourlyRate) {
-        return hourlyRate * HOURS_PER_WEEK * WEEKS 
+        return ((hourlyRate * HOURS_PER_WEEK * WEEKS) * 1.00).toFixed(2)
     },
     toHourly(annualSalary) {
-        return (annualSalary / (WEEKS * HOURS_PER_WEEK)) * 1.00
+        return ((annualSalary / (WEEKS * HOURS_PER_WEEK)) * 1.00).toFixed(2)
     }
 }
 
